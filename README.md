@@ -69,28 +69,33 @@ The project also includes a dedicated Admin Dashboard for managing products and 
 watch-store/
 │
 ├── client/
-│   └── src/
-│       ├── admin/
-│       ├── app/
-│       ├── assets/
-│       ├── components/
-│       ├── context/
-│       ├── data/
-│       ├── features/
-│       ├── hooks/
-│       ├── pages/
-│       ├── routes/
-│       ├── services/
-│       └── theme/
+│   ├── src/
+│   │   ├── admin/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── data/
+│   │   ├── features/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── theme/
+│   │
+│   └── package.json
 │
 ├── server/
+│   ├── config/
 │   ├── controllers/
+│   ├── middleware/
 │   ├── models/
 │   ├── routes/
-│   └── server.js
+│   ├── utils/
+│   ├── server.js
+│   └── package.json
 │
 ├── .gitignore
-└── README.md
+├── README.md
+└── structure.txt
 ```
 
 ## 🔐 Authentication
