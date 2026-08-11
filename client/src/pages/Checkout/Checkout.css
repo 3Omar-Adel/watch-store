@@ -1,0 +1,16 @@
+.checkoutSection {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 600px) {
+    .checkoutSection {
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+}

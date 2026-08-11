@@ -4,10 +4,18 @@ const router = express.Router();
 const {
     registerUser,
     loginUser,
+    getUsers,
 } = require("../controllers/userController");
 
-router.post("/register" , registerUser);
-router.post("/login" , loginUser);
+const {
+    protect,
+    admin,
+} = require("../middleware/authMiddleware");
 
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+
+// GET /api/users
+router.get("/", protect, admin, getUsers);
 
 module.exports = router;

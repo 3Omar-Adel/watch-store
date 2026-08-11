@@ -1,0 +1,79 @@
+.luxuryBanner{
+    width:90%;
+    margin:100px auto;
+    padding:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#f8f6f2;
+    border-radius:35px;
+    overflow:hidden;
+}
+
+.bannerContent{
+    width:48%;
+}
+
+.bannerTag{
+    color:#C6A769;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.bannerContent h2{
+    font-size:46px;
+    margin:18px 0;
+    color:#222;
+    line-height:1.2;
+}
+
+.bannerContent h2 span{
+    color:#C6A769;
+}
+
+.bannerContent p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.bannerBtn{
+    display:inline-block;
+    padding:15px 34px;
+    border-radius:50px;
+    text-decoration:none;
+
+    background:#C6A769;
+    color:white;
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.bannerBtn:hover{
+    transform:translateY(-4px);
+}
+
+.bannerImage{
+    width:40%;
+    display:flex;
+    justify-content:center;
+     position:relative;
+}
+.bannerImage::before{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:#EFE9DE;
+    z-index:0;
+}
+.bannerImage img{
+    width:100%;
+    max-width:420px;
+    position:relative;
+    z-index:1;
+}

@@ -12,6 +12,18 @@ const generateToken = (id) => {
     )
 }
 
+const getUsers = async (req, res) => {
+    try {
+        const users = await User.find().select("-password");
+
+        res.status(200).json(users);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message,
+        });
+    }
+}; 
+
 const registerUser = async (req, res) => {
     try {
         const {name, email, password} = req.body;
@@ -37,7 +49,14 @@ const registerUser = async (req, res) => {
             email,
             password: hashedPassword,
         });
-        res.status(201).json(user);
+        res.status(201).json({
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            createdAt: user.createdAt,
+            token: generateToken(user._id),
+        });
     } catch (error) {
         res.status(500).json({
             message: error.message
@@ -70,6 +89,7 @@ const loginUser = async (req, res) => {
             name: user.name,
             email: user.email,
             role: user.role,
+            createdAt: user.createdAt,
             token: generateToken(user._id)
         })
     }catch (error) {
@@ -80,6 +100,7 @@ const loginUser = async (req, res) => {
 }
 
 module.exports = {
+    getUsers,
     registerUser,
     loginUser,
 }

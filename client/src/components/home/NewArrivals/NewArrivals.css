@@ -1,0 +1,125 @@
+.newArrivals{
+    padding:70px 6%;
+}
+
+.sectionHeading{
+    text-align:center;
+    max-width:650px;
+    margin:auto;
+}
+
+
+
+.sectionHeading h2{
+    margin:18px 0;
+    font-size:40px;
+    color:#C6A769;
+}
+
+.sectionHeading p{
+    color:#666;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* NewArrivalCard */
+.arrivalGrid{
+    margin:60px auto 0;
+    display:grid;
+    width: 88%;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+}
+
+.arrivalCard{
+    display:flex;
+    flex-direction:column;
+    text-decoration:none;
+    border-radius:22px;
+    overflow:hidden;
+    /* box-shadow:0 12px 35px rgba(0,0,0,.08); */
+    transition:.35s;
+
+}
+
+.arrivalCard:hover{
+    transform:translateY(.5px);
+}
+
+.arrivalImage{
+    overflow:hidden;
+}
+
+.arrivalImage img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    transition:.5s;
+    border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+
+
+.arrivalInfo{
+    padding:18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrivalInfo h3{
+    color:#444444;
+    font-size:14px;
+    margin-bottom:12px;
+
+    overflow:hidden;
+}
+
+.arrivalPrice{
+    color:#C6A769;
+    font-weight:700;
+    font-size:20px;
+}
+
+/*  */
+@media (max-width:992px){
+
+    .arrivalGrid{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .newArrivals{
+        padding:50px 20px;
+    }
+
+    .sectionHeading h2{
+        font-size:30px;
+    }
+
+    .sectionHeading p{
+        font-size:14px;
+    }
+
+    .arrivalGrid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .arrivalInfo{
+        padding:12px;
+    }
+
+    .arrivalInfo h3{
+        font-size:15px;
+    }
+
+    .arrivalPrice{
+        font-size:17px;
+    }
+
+}

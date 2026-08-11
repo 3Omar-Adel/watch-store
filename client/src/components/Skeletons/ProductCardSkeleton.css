@@ -1,0 +1,106 @@
+.productSkeleton{
+    width:100%;
+    max-width:230px;
+    margin:auto;
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.skeletonImage{
+    position:relative;
+    height:250px;
+    background:#ececec;
+    overflow:hidden;
+}
+.skeletonInfo{
+    background:#f2f7fc;
+    padding:22px;
+}
+.skeletonBrand,
+.skeletonTitle,
+.skeletonPrice,
+.skeletonHeart{
+    position:relative;
+    overflow:hidden;
+    background:#e2e2e2;
+}
+.skeletonBrand{
+    width:70px;
+    height:12px;
+    border-radius:8px;
+    margin-bottom:18px;
+}
+.skeletonTitle{
+    width:100%;
+    height:18px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+.skeletonTitle.short{
+    width:70%;
+}
+.skeletonPrice{
+    width:90px;
+    height:28px;
+    border-radius:8px;
+    margin-top:20px;
+}
+.skeletonHeart{
+    position:absolute;
+    top:16px;
+    right:16px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+}
+.skeletonBrand::after,
+.skeletonTitle::after,
+.skeletonPrice::after,
+.skeletonHeart::after,
+.skeletonImage::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    transform:translateX(-100%);
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.7),
+        transparent
+    );
+    animation:skeleton-loading 1.2s infinite;
+}
+@keyframes skeleton-loading{
+    100%{
+        transform:translateX(100%);
+    }
+}
+/* Mobile */
+@media(max-width:768px){
+.productSkeleton{
+    max-width:160px;
+}
+.skeletonImage{
+    height:160px;
+}
+.skeletonInfo{
+    padding:16px;
+}
+.skeletonBrand{
+    width:55px;
+    height:10px;
+}
+.skeletonTitle{
+    height:14px;
+}
+.skeletonPrice{
+    width:70px;
+    height:22px;
+}
+.skeletonHeart{
+    width:36px;
+    height:36px;
+}
+
+}

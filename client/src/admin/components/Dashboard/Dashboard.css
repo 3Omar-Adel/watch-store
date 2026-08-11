@@ -1,0 +1,127 @@
+/*  */
+.chartCard {
+    background: var(--bg-color);
+    border-radius: 22px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    margin-top: 30px;
+}
+
+.chartCard h2 {
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+/* Dashboard.jsx */
+.chartBest {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/*  End Dashboard.jsx */
+.cardHeader {
+    color: var(--primary-dark);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+.cardItem{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(0,1fr));
+    gap:15px;
+    width: 100%;
+    min-width: 0;
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid var(--primary);
+    border-radius: 18px;
+    padding: 5px;
+    gap: 18px;
+    background-color: var(--bg-color);
+    transition: .3s ease;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.valueCard {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    min-width: 0;
+}
+
+.valueCard .unit {
+    font-size: 14px;
+    font-weight: 500;
+}
+.cardInfo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 0px 10px var(--primary);
+}
+
+.cardInfo h4 {
+    color: var(--color);
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+
+}
+.cardInfo .unit {
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cardInfo span {
+    padding-left: 10px;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .cardItem {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cardInfo {
+        transition: none;
+        box-shadow: none;
+    }
+
+    .valueCard {
+        display: flex;
+        align-items: baseline;
+        gap: 3px;
+    }
+
+    .valueCard .unit {
+        font-size: 9px !important;
+    }
+
+    .valueCard {
+        font-size: 22px !important;
+    }
+
+    .valueCard > *:first-child {
+        font-size: 12px !important;
+    }
+    .cardInfo:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+@media (max-width: 900px) {
+    .chartBest {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+

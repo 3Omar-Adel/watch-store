@@ -3,9 +3,11 @@ const cloudinary = require("../config/cloudinary");
 const uploadToCloudinary = require("../utils/cloudinaryUpload")
 
 // for Add by POST
+
+
 const createProduct = async (req, res) => {
     try {
-        const imageUrls = [];
+        const images = [];
         
         if (req.files && req.files.length > 0) {
             for (const file of req.files) {
@@ -13,13 +15,16 @@ const createProduct = async (req, res) => {
                     file.buffer,
                     "products"
                 );
-                imageUrls.push(result.secure_url);
+                images.push({
+                    url: result.secure_url,
+                    public_id: result.public_id,
+                });
             }
         }
 
         const product = await Product.create({
             ...req.body,
-            images: imageUrls,
+            images,
         });
 
         res.status(201).json({
@@ -43,6 +48,18 @@ const getProduct = async (req, res) => {
         })
     }
 }
+// 
+const getFeaturedProducts = async (req, res) => {
+    try {
+        const products = await Product.find({ featured: true }).limit(12);
+
+        res.status(200).json(products);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message,
+        });
+    }
+};
 // for get the product by GET with ID
 const getProductedById = async (req, res) => {
     try {
@@ -66,26 +83,84 @@ const getProductedById = async (req, res) => {
 // for edit product by PUT with ID and body and other
 const updateProduct = async (req, res) => {
     try {
-        const product = await Product.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-        {
-            returnDocument: "after",
-            runValidators: true
-        }
-    )
-    if(!product) {
+console.log("FILES:", req.files);
+console.log("FILES:", req.files);
+        const product = await Product.findById(req.params.id);
+
+        if (!product) {
             return res.status(404).json({
-                message: "product not found"
-            })
+                message: "Product not found",
+            });
         }
-    res.status(200).json(product)
+
+        // حذف الصور المطلوبة
+        if (req.body.deletedImages) {
+
+            const deletedImages = Array.isArray(req.body.deletedImages)
+                ? req.body.deletedImages
+                : [req.body.deletedImages];
+
+            for (const img of deletedImages) {
+
+                const image = product.images.find(
+                    (i) => i.url === img
+                );
+
+                if (image) {
+                    await cloudinary.uploader.destroy(
+                        image.public_id
+                    );
+                }
+            }
+
+            product.images = product.images.filter(
+                (i) => !deletedImages.includes(i.url)
+            );
+        }
+
+        // رفع الصور الجديدة
+        if (req.files && req.files.length > 0) {
+
+            for (const file of req.files) {
+
+                const result = await uploadToCloudinary(
+                    file.buffer,
+                    "products"
+                );
+
+                product.images.push({
+                    url: result.secure_url,
+                    public_id: result.public_id,
+                });
+            }
+        }
+
+        product.name = req.body.name;
+        product.brand = req.body.brand;
+        product.category = req.body.category;
+        product.gender = req.body.gender;
+        product.price = req.body.price;
+        product.discount = req.body.discount;
+        product.stock = req.body.stock;
+        product.description = req.body.description;
+        product.featured =
+            req.body.featured === "true" ||
+            req.body.featured === true;
+console.log(product);
+        await product.save();
+
+        res.status(200).json(product);
+
     } catch (error) {
+console.log(error);
         res.status(500).json({
-            message: error.message
-        })
+            message: error.message,
+        });
+
     }
-}
+    
+};
+
 // for Delete by DELETE with ID
 const deleteProduct = async (req, res) => {
     try{
@@ -113,4 +188,5 @@ module.exports = {
     getProductedById,
     updateProduct,
     deleteProduct,
+    getFeaturedProducts,
 }

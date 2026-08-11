@@ -22,10 +22,24 @@ const productSchema = new mongoose.Schema({
         required: true,
     },
     images: [
-        {
+    {
+        url: {
             type: String,
         },
+        public_id: {
+            type: String,
+            },
+        },
     ],
+    gender: {
+        type: String,
+        enum: ["men", "women", "unisex"],
+        required: true,
+    },
+    discount: {
+        type: Number,
+        default: 0,
+    },
     stock: {
         type: Number,
         required: true,
