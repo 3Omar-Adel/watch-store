@@ -1,79 +1,89 @@
-Watch Store
+# Watch Store
 
 A full-stack e-commerce web application for browsing, purchasing, and managing watches.
 
 The project was built with a strong Frontend focus, supported by a custom RESTful backend API to provide a realistic full-stack e-commerce environment and practical experience integrating React applications with backend services.
 
-🔗 Live Demo
+## 🔗 Live Demo
 
-[Live Demo](https://watch-store-tau-eight.vercel.app/)
+[View Live Demo](https://watch-store-tau-eight.vercel.app/)
 
-📂 GitHub Repository
+## 📂 GitHub Repository
 
 [View Source Code](https://github.com/3Omar-Adel/watch-store)
 
-🚀 Project Overview
+## 🔐 Demo Credentials
+
+### Admin Account
+
+* Email: `omaradel@gmail.com`
+* Password: `1234567`
+
+Use these credentials to access the Admin Dashboard and explore product and order management features.
+
+## 🚀 Project Overview
 
 Watch Store is a responsive e-commerce platform that provides customers with a complete shopping experience, from browsing products to managing their cart, wishlist, addresses, and orders.
 
 The project also includes a dedicated Admin Dashboard for managing products and orders and monitoring store activity.
 
-✨ Features
+## ✨ Features
 
-Customer Features
+### Customer Features
 
-- User registration and login
-- JWT-based authentication
-- Browse and search products
-- Product filtering and categorization
-- Product details page
-- Shopping cart
-- Wishlist
-- Product quantity management
-- Checkout and order creation
-- Address management
-- Order history
-- Responsive design for desktop and mobile
-- Loading states and error handling
+* User registration and login
+* JWT-based authentication
+* Browse and search products
+* Product filtering and categorization
+* Product details page
+* Shopping cart
+* Wishlist
+* Product quantity management
+* Checkout and order creation
+* Address management
+* Order history
+* Responsive design for desktop and mobile
+* Loading states and error handling
 
-Admin Features
+### Admin Features
 
-- Protected admin dashboard
-- Role-based access control
-- Product management
-- Add, update, and delete products
-- Product image management
-- Order management
-- Update order status
-- Sales statistics
-- Dashboard overview
-- Admin-specific navigation and layout
+* Protected admin dashboard
+* Role-based access control
+* Product management
+* Add, update, and delete products
+* Product image management
+* Order management
+* Update order status
+* Sales statistics
+* Dashboard overview
+* Admin-specific navigation and layout
 
-🛠️ Technologies
+## 🛠️ Technologies
 
-Frontend
+### Frontend
 
-- React
-- React Router
-- Redux Toolkit
-- React Context API
-- Material UI
-- Axios
-- JavaScript (ES6+)
-- CSS
+* React
+* React Router
+* Redux Toolkit
+* React Context API
+* Material UI
+* Axios
+* JavaScript (ES6+)
+* CSS
 
-Backend
+### Backend
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-- bcrypt
-- REST API
-- Cloudinary
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+* bcrypt
+* REST API
+* Cloudinary
 
-🏗️ Project Structure
+## 🏗️ Project Structure
+
 ```text
 watch-store/
 │
@@ -106,7 +116,8 @@ watch-store/
 ├── README.md
 └── structure.txt
 ```
-🔐 Authentication
+
+## 🔐 Authentication
 
 The application implements user authentication using JWT tokens.
 
@@ -114,68 +125,67 @@ Passwords are securely hashed using bcrypt before being stored, and protected ro
 
 Role-Based Access Control (RBAC) is used to separate customer and admin permissions.
 
-🔄 Frontend & Backend Integration
+## 🔄 Frontend & Backend Integration
 
 The React frontend communicates with the backend through RESTful APIs using Axios.
 
 The backend was developed to provide practical experience with:
 
-- API integration
-- HTTP requests
-- Authentication
-- CRUD operations
-- Database interaction
-- Error handling
-- Connecting frontend features with backend services
+* API integration
+* HTTP requests
+* Authentication
+* CRUD operations
+* Database interaction
+* Error handling
+* Connecting frontend features with backend services
 
-☁️ Image Management
+## ☁️ Image Management
 
 Product images are uploaded and managed using Cloudinary.
 
 This provides practical experience working with external cloud services and integrating image management into an e-commerce application.
 
-📱 Responsive Design
+## 📱 Responsive Design
 
 The application is designed to provide a consistent experience across:
 
-- Desktop
-- Tablet
-- Mobile devices
+* Desktop
+* Tablet
+* Mobile devices
 
-🎯 Project Goals
+## 🎯 Project Goals
 
 The main goal of this project was to build a realistic e-commerce application while strengthening practical Frontend development skills.
 
 The project focuses heavily on:
 
-- React architecture
-- State management
-- Component-based development
-- API integration
-- Authentication
-- Responsive UI
-- E-commerce workflows
-- Admin dashboard development
+* React architecture
+* State management
+* Component-based development
+* API integration
+* Authentication
+* Responsive UI
+* E-commerce workflows
+* Admin dashboard development
 
-🚀 Deployment
+## 🚀 Deployment
 
 The application is deployed using Vercel.
 
 The Frontend and Backend are deployed as separate services and communicate through RESTful APIs.
 
-📌 Future Improvements
+## 📌 Future Improvements
 
 Possible future improvements include:
 
-- Online payment integration
-- Automated testing
-- Advanced product search
-- Performance optimization
-- CI/CD pipeline with automated testing
-- Additional analytics and reporting
+* Online payment integration
+* Automated testing
+* Advanced product search
+* Performance optimization
+* CI/CD pipeline with automated testing
+* Additional analytics and reporting
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Omar Adel
-
+**Omar Adel**
 Frontend Developer
