@@ -58,7 +58,7 @@ function ProductDetails() {
                 minHeight: "100vh",
                 background: "#F8F8F8",
                 pt: { xs: 10, md: 13 },
-                pb: 6,
+                pb: 12,
             }}
         >
             <Box

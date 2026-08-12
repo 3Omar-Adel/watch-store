@@ -139,8 +139,10 @@ function ProductInfo({ product }) {
                 }}
             >
                 <Typography
-                    fontWeight={600}
-                    mr={1}
+                    sx={{
+                        fontWeight: 600,
+                        mr: 1,
+                    }}
                 >
                     Quantity
                 </Typography>
@@ -154,9 +156,11 @@ function ProductInfo({ product }) {
                 </Button>
 
                 <Typography
-                    fontWeight={700}
-                    width={25}
-                    textAlign="center"
+                    sx={{
+                        fontWeight: 700,
+                        width: 25,
+                        textAlign: "center",
+                    }}
                 >
                     {quantity}
                 </Typography>
