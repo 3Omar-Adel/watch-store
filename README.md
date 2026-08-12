@@ -27,6 +27,44 @@ Watch Store is a responsive e-commerce platform that provides customers with a c
 
 The project also includes a dedicated Admin Dashboard for managing products and orders and monitoring store activity.
 
+## 📸 Screenshots
+
+### Home Page
+
+![Watch Store Home Page](screenshots/Home.png)
+
+### Cart
+
+![Watch Store Cart](screenshots/Cart.png)
+
+### Product Details
+
+![Product Details](screenshots/productDetails.png)
+
+### Wishlist
+
+![Watch Store Wishlist](screenshots/Wishlist.png)
+
+### New Arrivals
+
+![Watch Store NewArrivals](screenshots/NewArrivals.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/Dashboard.png)
+
+### Admin Overview
+
+![Admin Products](screenshots/Overview.png)
+
+### Admin Orders
+
+![Admin Orders](screenshots/Orders.png)
+
+### Admin Products
+
+![Admin Orders](screenshots/ProductsAdmin.png)
+
 ## ✨ Features
 
 ### Customer Features
