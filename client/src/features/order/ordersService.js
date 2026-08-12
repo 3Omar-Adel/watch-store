@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/orders/";
+const API_URL = "https://watch-store-5pti.vercel.app/api/orders/";
 
 const getToken = () => {
     const user = JSON.parse(

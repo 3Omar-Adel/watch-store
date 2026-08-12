@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/wishlist/";
+const API_URL = "https://watch-store-5pti.vercel.app/api/wishlist/";
 
 const getToken = () => {
     const user = JSON.parse(localStorage.getItem("user"));
