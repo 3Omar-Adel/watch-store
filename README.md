@@ -1,18 +1,26 @@
-# Watch Store
+Watch Store
 
 A full-stack e-commerce web application for browsing, purchasing, and managing watches.
 
-The project was built primarily as a Frontend-focused application, with a custom backend API developed to simulate a real-world environment and provide practical experience integrating React applications with backend services.
+The project was built with a strong Frontend focus, supported by a custom RESTful backend API to provide a realistic full-stack e-commerce environment and practical experience integrating React applications with backend services.
 
-## 🚀 Project Overview
+🔗 Live Demo
+
+[Live Demo](https://watch-store-tau-eight.vercel.app/)
+
+📂 GitHub Repository
+
+[View Source Code](https://github.com/3Omar-Adel/watch-store)
+
+🚀 Project Overview
 
 Watch Store is a responsive e-commerce platform that provides customers with a complete shopping experience, from browsing products to managing their cart, wishlist, addresses, and orders.
 
 The project also includes a dedicated Admin Dashboard for managing products and orders and monitoring store activity.
 
-## ✨ Features
+✨ Features
 
-### Customer Features
+Customer Features
 
 - User registration and login
 - JWT-based authentication
@@ -28,9 +36,10 @@ The project also includes a dedicated Admin Dashboard for managing products and 
 - Responsive design for desktop and mobile
 - Loading states and error handling
 
-### Admin Features
+Admin Features
 
 - Protected admin dashboard
+- Role-based access control
 - Product management
 - Add, update, and delete products
 - Product image management
@@ -40,9 +49,9 @@ The project also includes a dedicated Admin Dashboard for managing products and 
 - Dashboard overview
 - Admin-specific navigation and layout
 
-## 🛠️ Technologies
+🛠️ Technologies
 
-### Frontend
+Frontend
 
 - React
 - React Router
@@ -53,7 +62,7 @@ The project also includes a dedicated Admin Dashboard for managing products and 
 - JavaScript (ES6+)
 - CSS
 
-### Backend
+Backend
 
 - Node.js
 - Express.js
@@ -62,9 +71,9 @@ The project also includes a dedicated Admin Dashboard for managing products and 
 - JWT Authentication
 - bcrypt
 - REST API
+- Cloudinary
 
-## 🏗️ Project Structure
-
+🏗️ Project Structure
 ```text
 watch-store/
 │
@@ -97,14 +106,15 @@ watch-store/
 ├── README.md
 └── structure.txt
 ```
-
-## 🔐 Authentication
+🔐 Authentication
 
 The application implements user authentication using JWT tokens.
 
 Passwords are securely hashed using bcrypt before being stored, and protected routes are used for authenticated user and admin operations.
 
-## 🔄 Frontend & Backend Integration
+Role-Based Access Control (RBAC) is used to separate customer and admin permissions.
+
+🔄 Frontend & Backend Integration
 
 The React frontend communicates with the backend through RESTful APIs using Axios.
 
@@ -118,7 +128,13 @@ The backend was developed to provide practical experience with:
 - Error handling
 - Connecting frontend features with backend services
 
-## 📱 Responsive Design
+☁️ Image Management
+
+Product images are uploaded and managed using Cloudinary.
+
+This provides practical experience working with external cloud services and integrating image management into an e-commerce application.
+
+📱 Responsive Design
 
 The application is designed to provide a consistent experience across:
 
@@ -126,7 +142,7 @@ The application is designed to provide a consistent experience across:
 - Tablet
 - Mobile devices
 
-## 🎯 Project Goals
+🎯 Project Goals
 
 The main goal of this project was to build a realistic e-commerce application while strengthening practical Frontend development skills.
 
@@ -141,18 +157,24 @@ The project focuses heavily on:
 - E-commerce workflows
 - Admin dashboard development
 
-## 📌 Future Improvements
+🚀 Deployment
+
+The application is deployed using Vercel.
+
+The Frontend and Backend are deployed as separate services and communicate through RESTful APIs.
+
+📌 Future Improvements
 
 Possible future improvements include:
 
 - Online payment integration
+- Automated testing
 - Advanced product search
 - Performance optimization
-- Automated testing
-- Deployment and CI/CD
+- CI/CD pipeline with automated testing
 - Additional analytics and reporting
 
-## 👨‍💻 Author
+👨‍💻 Author
 
 Omar Adel
 
