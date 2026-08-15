@@ -120,6 +120,7 @@ function ProductInfo({ product }) {
                 sx={{
                     mt: 3,
                     color: "#666",
+                    whiteSpace: "pre-line",
                     lineHeight: 1.8,
                     fontSize: 15,
                 }}

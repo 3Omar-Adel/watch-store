@@ -30,10 +30,8 @@ function CartItem({ item }) {
         <Box
             sx={{
                 width: "100%",
-
                 display: "flex",
                 alignItems: "center",
-
                 gap: {
                     xs: 1.5,
                     sm: 2.5,
@@ -147,6 +145,12 @@ function CartItem({ item }) {
                 <Box
                     sx={{
                         minWidth: 0,
+                        flex: 1,
+                        maxWidth: {
+                            xs: "calc(100% - 100px)",
+                            sm: "320px",
+                            md: "400px",
+                        },
                         display: "flex",
                         flexDirection: "column",
                     }}
@@ -176,9 +180,9 @@ function CartItem({ item }) {
                                 md: 18,
                             },
 
+                            maxWidth: "50px",
                             fontWeight: 700,
                             color: "#222",
-
                             display: "-webkit-box",
                             WebkitLineClamp: 2,
                             WebkitBoxOrient: "vertical",
@@ -212,9 +216,15 @@ function CartItem({ item }) {
             <Box
                 sx={{
                     flexShrink: 0,
+                    width: {
+                        xs: "auto",
+                        sm: 250,
+                        md: 285,
+                    },
 
                     display: "flex",
                     alignItems: "center",
+                    justifyContent: "flex-end",
 
                     gap: {
                         xs: 1,
@@ -323,18 +333,16 @@ function CartItem({ item }) {
 
                 <Typography
                     sx={{
-                        minWidth: {
+                        width: {
                             xs: 65,
                             sm: 90,
                         },
-
+                        flexShrink: 0,
                         textAlign: "right",
-
                         fontSize: {
                             xs: 12,
                             sm: 15,
                         },
-
                         fontWeight: 700,
                     }}
                 >
